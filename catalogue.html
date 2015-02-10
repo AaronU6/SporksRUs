@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title> Sporks R' Us </title>
+	<link rel="stylesheet" type="text/css" href="http://cs.mcgill.ca/~authay1/SporksRUs/main.css">	
+
+	<script type=text/javascript>
+		var image = new Image()
+		image[0] = new Image()
+		image[0].src = "http://cs.mcgill.ca/~authay1/SporksRUs/images/ChristmasDetails.png"
+		image[1] = new Image()
+		image[1].src = "http://cs.mcgill.ca/~authay1/SporksRUs/images/AndroidDetails.png"
+		image[2] = new Image()
+		image[2].src = "http://cs.mcgill.ca/~authay1/SporksRUs/images/Spock.png"
+	</script>
+</head>
+
+<body id=grad2>
+	<table id=main>
+	<tr><td>
+		<h1> <b>Sporks R'Us</b> </h1> 
+		<ul style ="list-style-type:none">
+			<li> <form action=http://cs.mcgill.ca/~authay1/SporksRUs/login.html method=POST target=_blank><input type=hidden name=username><input type=Submit value=LOGIN id=button></form> </li>
+			<li> <form action=http://cs.mcgill.ca/~authay1/SporksRUs/catalogue.html method=POST><input type=hidden name=username><input type=Submit value=CATALOGUE id=button></form> </li>
+			<li> <form action=http://cs.mcgill.ca/~authay1/SporksRUs/home.html method=POST><input type=hidden name=username><input type=Submit value=HOME id=button></form> </li>
+		</ul>
+	</td></tr>
+	</table>
+	<table id=slideshow>
+	<tr><td>
+	<img src="http://cs.mcgill.ca/~authay1/SporksRUs/images/Christmas.png" id="slide" width=900 height=400 alt="image">
+	<script type="text/javascript">
+		var i=0
+		function slideshow(){
+			if(!document.images)
+				return
+			document.getElementById('slide').src=image[i].src
+			if (i<2)
+				i++
+			else
+				i=0
+				setTimeout("slideshow()", 1500)
+		} slideshow()
+	</script>
+	</td></tr>
+	</table>
+	
+	<form action=http://cs.mcgill.ca/~authay1/SporksRUs/cgi-bin/purchase.py>
+		<!--Item #1-->
+		<table id=item cellpadding=0>	
+		<tr>
+			<td width=300px>
+				<img src="http://cs.mcgill.ca/~authay1/SporksRUs/images/SporkColour.png" width=260px height=260px style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto;">
+			</td>
+			<td width=600px><table cellpadding=0>
+				<tr height=240px style=margin-top:10px>
+				<td>
+					<p><i>Titanium Spork - $5.00</i></p>
+					<p>Crafted by the finest spork makers of our time. An elegant scratch-proof utensil guranteed to last a life time </p>
+				</td>
+				</tr>
+				<tr height=30px>
+					<td width=250px id=Selector> Select<input style=none type=checkbox name=Item_1 value=off> </td>
+					<td width=250px id=Quantity> Quantity: <input style=none type=number name=Q_1 value=0> </td>
+				</tr>			
+			</table></td>
+		</tr>
+		</table>
+
+
+		<!--Item #2-->
+		<table id=item cellpadding=0>
+                <tr>
+                        <td width=300px>
+                                <img src="http://cs.mcgill.ca/~authay1/SporksRUs/images/Mug.png" width=260px height=260px style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto;">
+                        </td>
+                        <td width=600px><table cellpadding=0>
+                                <tr height=240px style=margin-top:10px>
+                                <td>
+                                        <p><i>I Love Sporks Mug - $10.00</i></p>
+                                        <p>Show your spork appreciation by getting a limited edition I Love Sporks Mug. </p>
+                                </td>
+                                </tr>
+                                <tr height=30px>
+                                        <td width=250px id=Selector> Select<input style=none type=checkbox name=Item_2 value=off> </td>
+                                        <td width=250px id=Quantity> Quantity: <input style=none type=number name=Q_2 value=0> </td>
+                                </tr>
+                        </table></td>
+                </tr>
+                </table>
+
+
+		<!--Item #3-->
+		 <table id=item cellpadding=0>
+                <tr>
+                        <td width=300px>
+                                <img src="http://cs.mcgill.ca/~authay1/SporksRUs/images/Shirt.png" width=260px height=260px style="margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto;">
+                        </td>
+                        <td width=600px><table cellpadding=0>
+                                <tr height=240px style=margin-top:10px>
+                                <td>
+                                        <p><i>Rawr! I'm a Spork T-Shirt - $15.00</i></p>
+                                        <p>Be the coolest kid on the block when rocking this awesome graphic tee </p>
+                                </td>
+                                </tr>
+                                <tr height=30px>
+                                        <td width=250px id=Selector> Select<input style=none type=checkbox name=Item_3 value=off> </td>
+                                        <td width=250px id=Quantity> Quantity: <input style=none type=number name=Q_3 value=0> </td>
+                                </tr>
+                        </table></td>
+                </tr>
+                </table>
+
+		
+		<table id=submitBox><tr><td>
+			<input type=hidden name=username><input type=Submit value=Purchase id=button style=margin-top:auto;font-size:40px;height:50px;width:200px;>
+		</td></tr></table>
+	</form>	
+</body>
+<html>

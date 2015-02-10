@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title> Sporks R' Us </title>
+	<link rel="stylesheet" type="text/css" href="http://cs.mcgill.ca/~authay1/SporksRUs/main.css">	
+
+	<script type=text/javascript>
+		var image = new Image()
+		image[0] = new Image()
+		image[0].src = "http://cs.mcgill.ca/~authay1/SporksRUs/images/ChristmasDetails.png"
+		image[1] = new Image()
+		image[1].src = "http://cs.mcgill.ca/~authay1/SporksRUs/images/AndroidDetails.png"
+		image[2] = new Image()
+		image[2].src = "http://cs.mcgill.ca/~authay1/SporksRUs/images/Spock.png"
+	</script>
+</head>
+
+<body id=grad2>
+	<table id=main>
+	<tr><td>
+	<h1> <b> Sporks R'Us </b></h1>
+		<ul style ="list-style-type:none">
+			<li> <form action=http://cs.mcgill.ca/~authay1/SporksRUs/login.html method=POST target=_blank><input type=hidden name=username><input type=Submit value=LOGIN id=button></form> </li>
+			<li> <form action=http://cs.mcgill.ca/~authay1/SporksRUs/catalogue.html method=POST><input type=hidden name=username><input type=Submit value=CATALOGUE id=button></form> </li>
+			<li> <form action=http://cs.mcgill.ca/~authay1/SporksRUs/home.html method=POST><input type=hidden name=username><input type=Submit value=HOME id=button></form> </li>
+		</ul>
+	</td></tr>
+	</table>
+	<table id=slideshow>
+	<tr><td>
+	<img src="http://cs.mcgill.ca/~authay1/SporksRUs/images/Christmas.png" id="slide" width=900 height=400 alt="image">
+	<script type="text/javascript">
+		var i=0
+		function slideshow(){
+			if(!document.images)
+				return
+			document.getElementById('slide').src=image[i].src
+			if (i<2)
+				i++
+			else
+				i=0
+				setTimeout("slideshow()", 1500)
+		} slideshow()
+	</script>
+	</td></tr>
+	</table>
+	<table id=contentBox>
+		<tr><td>
+		<img src="http://cs.mcgill.ca/~authay1/SporksRUs/images/Spork.png" height=100px width=100px style="margin-left:10px;margin-top:10px">
+		</td>
+		<td>
+		<table id=content>
+		<tr><td>
+		<h2 style = line-height:40px;> About Us </h2>
+		<p style = line-height:100%;> Have you ever eaten a steak, ice cream or anything that required an utensil?  At Sporks R' Us, we believe that evolution is key for mankinds survival, even if that involves kitchen utensils. Customers may shop for various types of sporks online through our service. What is a Spork? It is a fork and a spoon in one. </p>
+		<p> What is a fork? </p>
+		<ul>
+			<li> A utensil with two or more prongs, much like Poseidon's mighty Trident that is used to pick up food </li>
+		</ul>
+		<p> What is a spoon? </p> 
+		<ul>
+			<li> A utensil used to scoop food most likely named after Dave Matthews Band song "Spoon" </li>
+		</ul>
+		<p> Fork + Spoon = Spork </p>
+		<p> <b> EVOLUTION = SPORK </b> </p> 
+		</td></tr>
+		</table>
+		</td></tr>
+	</table>
+</body>
+<html>
